@@ -674,10 +674,10 @@ footer {
         display: block;
         position: absolute;
         top: -52px;
-        left: 50%;
-        -webkit-transform: translate(calc(10px - 50%), 0);
-        -ms-transform: translate(calc(10px - 50%), 0);
-        transform: translate(calc(10px - 50%), 0);
+        left: calc(50% - 10px);
+        -webkit-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
         font-family: 'Source Sans Pro', sans-serif;
         font-style: normal;
         font-weight: bold;
