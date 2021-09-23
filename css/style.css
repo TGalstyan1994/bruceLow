@@ -670,6 +670,10 @@ footer {
         line-height: 36px;
     }
 
+    .bruce_info .about__info_image h2 {
+        left: calc(50% + 10px);
+    }
+
     .about__info_image h2 {
         display: block;
         position: absolute;
