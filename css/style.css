@@ -56,8 +56,29 @@ header.scrolled div {
     transition: .5s;
 }
 
+.helpers {
+    position: fixed;
+    bottom: 63px;
+    right: 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    z-index: 100;
+}
+
 header.scrolled img {
     width: 120px;
+}
+
+.helpers-item {
+    background: #B09673;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
 
@@ -151,8 +172,8 @@ header.scrolled img {
 }
 
 .about__info.bruce_info {
-    -ms-grid-columns: auto 70px minmax(auto, 447px);
-    grid-template-columns: auto minmax(auto, 447px);
+    -ms-grid-columns: auto 70px minmax(auto, 467px);
+    grid-template-columns: auto minmax(auto, 467px);
     gap: 70px;
     margin-bottom: 88px;
 }
@@ -203,7 +224,7 @@ header.scrolled img {
 }
 
 .bruce_info .about__info_image {
-    width: 100%;
+    width: calc(100% - 20px);
     padding-top: 150%;
     background: url("../images/BruceMatzkin.png") center center no-repeat;
     background-size: cover;
@@ -529,14 +550,38 @@ header.scrolled img {
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.mail__buttons span {
+.mail__buttons button span {
+    font-size: inherit;
+    color: inherit;
+    font-family: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+}
+
+.mail__buttons button span:last-child {
+    display: none;
+}
+
+.mail__buttons button.sending {
+    pointer-events: none;
+}
+
+.mail__buttons button.sending span:last-child {
+display: block;
+}
+
+.mail__buttons button.sending span:first-child {
+    display: none;
+}
+
+.mail__buttons .mail-sent {
     display: none;
     font-family: 'Nunito', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 27px;
-    color: #323232;
+    color: #077C05;
 }
 
 .mail__buttons.sent span {
@@ -602,6 +647,20 @@ footer {
     header, .top, .about, .cases, .contact, footer {
         padding-left: 70px;
         padding-right: 70px;
+    }
+
+    .helpers {
+        bottom: 60px;
+        right: 5px;
+    }
+
+    .helpers-item {
+        width: 50px;
+        height: 50px;
+    }
+
+    .helpers-item img {
+        width: 33px;
     }
 }
 
@@ -676,6 +735,8 @@ footer {
 
     .about__info_image h2 {
         display: block;
+        width: 100%;
+        text-align: center;
         position: absolute;
         top: -52px;
         left: calc(50% - 10px);

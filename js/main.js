@@ -4,6 +4,7 @@ let mailSent = document.querySelector('.mail__buttons')
 let mailButton = document.querySelector('#mail-submit-button')
 let topContactUsButton = document.querySelector('#top-contact-us-button')
 let contactBox = document.querySelector('#contact-box')
+let helpersMail = document.querySelector('#helpers-mail')
 let bigLogoImg = document.querySelector('#big-logo-img')
 
 window.addEventListener('scroll', function (e) {
@@ -25,17 +26,16 @@ window.onload = function () {
 	document.getElementById('contact-form').addEventListener('submit', function (event) {
 		event.preventDefault();
 
-		mailButton.style.pointerEvents = 'none'
+		mailButton.classList.add('sending')
 		emailjs.sendForm('service_ax5pngh', 'template_zbj4avu', this)
 			.then(function () {
 				mailSent.classList.add('sent')
-				mailButton.style.pointerEvents = 'auto'
+				mailButton.classList.remove('sending')
 				setTimeout(() => {
 					mailSent.classList.remove('sent')
 				}, 4000)
 			}, function (error) {
-				console.log(error);
-				mailButton.style.pointerEvents = 'auto'
+				mailButton.classList.remove('sending')
 			});
 	});
 }
@@ -43,6 +43,11 @@ window.onload = function () {
 topContactUsButton.addEventListener('click', () => {
 	contactBox.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
 })
+
+helpersMail.addEventListener('click', () => {
+	contactBox.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+})
+
 
 bigLogoImg.addEventListener('click', () => {
 	window.scrollTo({

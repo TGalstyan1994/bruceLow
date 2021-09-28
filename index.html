@@ -42,6 +42,14 @@ Retaliation, violation, rights, legal fees, first consultation fee, attorney, le
 </header>
 
 <main class="main">
+    <div class="helpers">
+        <div class="helpers-mail helpers-item" id="helpers-mail">
+            <img src="images/fixed-mail.svg" alt="">
+        </div>
+        <div class="helpers-call helpers-item">
+            <img src="images/fixed-call.svg" alt="">
+        </div>
+    </div>
     <section class="top">
         <h1>A LEGAL TEAM FOR EMPLOYEES</h1>
         <h2>in Connecticut and Massachusetts</h2>
@@ -151,11 +159,15 @@ Retaliation, violation, rights, legal fees, first consultation fee, attorney, le
                         <input type="text" required placeholder="Your Name *" name="user_name">
                         <input type="email" required placeholder="Your Email *" name="user_email">
                         <input type="text" placeholder="Subject" name="subject">
-                        <textarea name="message" required id="" cols="30" rows="10" placeholder="Your Message *"></textarea>
+                        <textarea name="message" required id="" cols="30" rows="10"
+                                  placeholder="Your Message *"></textarea>
                     </div>
-                    <div class="mail__buttons ">
-                        <button type="submit" id="mail-submit-button">SEND EMAIL</button>
-                        <span>Email sent!</span>
+                    <div class="mail__buttons">
+                        <button type="submit" id="mail-submit-button">
+                            <span>SEND EMAIL</span>
+                            <span><div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div></span>
+                        </button>
+                        <span class="mail-sent">Email sent!</span>
                     </div>
                 </div>
             </form>
