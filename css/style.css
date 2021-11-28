@@ -83,6 +83,10 @@ header.scrolled img {
     filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.37));
 }
 
+.helpers-item:hover {
+    background: #836946;
+}
+
 
 .top {
     padding: 0 165px;
@@ -580,7 +584,7 @@ header.scrolled img {
 }
 
 .mail__buttons button.sending span:last-child {
-display: block;
+    display: block;
 }
 
 .mail__buttons button.sending span:first-child {
