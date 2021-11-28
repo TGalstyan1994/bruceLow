@@ -8,6 +8,7 @@ let helpersMail = document.querySelector('#helpers-mail')
 let bigLogoImg = document.querySelector('#big-logo-img')
 let topScrollArrow = document.querySelector('#top-scroll-arrow')
 let about = document.querySelector('.about')
+let main = document.querySelector('.main')
 
 window.addEventListener('scroll', function (e) {
 	if (window.scrollY + 100 > window.innerHeight) {
@@ -43,22 +44,36 @@ window.onload = function () {
 }
 
 topContactUsButton.addEventListener('click', () => {
-	contactBox.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+	SmoothVerticalScrolling(contactBox, 300, 'top')
 })
 
 helpersMail.addEventListener('click', () => {
-	contactBox.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+	SmoothVerticalScrolling(contactBox, 300, 'top')
 })
 
 
 bigLogoImg.addEventListener('click', () => {
-	window.scrollTo({
-		top: 0,
-		left: 0,
-		behavior: 'smooth'
-	});
+	SmoothVerticalScrolling(main, 300, 'top')
 })
 
 topScrollArrow.addEventListener('click', () => {
-	about.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+	SmoothVerticalScrolling(about, 300, 'top')
 })
+
+
+function SmoothVerticalScrolling(e, time, where) {
+	var eTop = e.getBoundingClientRect().top;
+	var eAmt = eTop / 100;
+	var curTime = 0;
+	while (curTime <= time) {
+		window.setTimeout(SVS_B, curTime, eAmt, where);
+		curTime += time / 100;
+	}
+}
+
+function SVS_B(eAmt, where) {
+	if(where == "center" || where == "")
+		window.scrollBy(0, eAmt / 2);
+	if (where == "top")
+		window.scrollBy(0, eAmt);
+}
