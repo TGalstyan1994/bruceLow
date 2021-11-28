@@ -106,7 +106,6 @@ header.scrolled img {
     -ms-flex-align: start;
     align-items: flex-start;
     position: relative;
-    background: rgba(66, 81, 100, 0.5);
 }
 
 .top h1 {
@@ -294,7 +293,6 @@ header.scrolled img {
 
 .cases {
     padding: 72px 170px 100px;
-    background: rgba(46, 53, 61, 0.74)
 }
 
 .cases__title {
