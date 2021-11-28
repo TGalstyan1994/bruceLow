@@ -6,6 +6,8 @@ let topContactUsButton = document.querySelector('#top-contact-us-button')
 let contactBox = document.querySelector('#contact-box')
 let helpersMail = document.querySelector('#helpers-mail')
 let bigLogoImg = document.querySelector('#big-logo-img')
+let topScrollArrow = document.querySelector('#top-scroll-arrow')
+let about = document.querySelector('.about')
 
 window.addEventListener('scroll', function (e) {
 	if (window.scrollY + 100 > window.innerHeight) {
@@ -55,4 +57,8 @@ bigLogoImg.addEventListener('click', () => {
 		left: 0,
 		behavior: 'smooth'
 	});
+})
+
+topScrollArrow.addEventListener('click', () => {
+	about.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
 })
