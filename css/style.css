@@ -278,7 +278,6 @@ header.scrolled img {
 
 .mica_info .about__info_image {
     width: 100%;
-    aspect-ratio: 1 / 1.5;
     background: url("../images/NicaNotz.png") center center no-repeat;
     background-size: cover;
     margin: 0 0 20px 20px;
