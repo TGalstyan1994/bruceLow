@@ -30,7 +30,7 @@ window.onload = function () {
 		event.preventDefault();
 
 		mailButton.classList.add('sending')
-		emailjs.sendForm('service_ax5pngh', 'template_zbj4avu', this)
+		emailjs.sendForm('service_jmxg1co', 'template_zbj4avu', this)
 			.then(function () {
 				mailSent.classList.add('sent')
 				mailButton.classList.remove('sending')
